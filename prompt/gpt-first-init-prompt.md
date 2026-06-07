@@ -1,4 +1,4 @@
-# M.AI Tech Solutions AI Service Desk
+# TrNu Tech Solutions AI Service Desk
 
 ## Project Vision
 
@@ -21,7 +21,7 @@ The system should:
 
 # Business Problem
 
-Customers contact M.AI Tech Solutions for different reasons:
+Customers contact TrNu Tech Solutions for different reasons:
 
 1. New Project Inquiry
 2. SaaS Product Questions

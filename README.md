@@ -1,4 +1,4 @@
-# M.AI Tech Solutions AI Service Desk
+# TrNu Tech Solutions AI Service Desk
 
 ## Project Vision
 An Enterprise-grade AI Service Desk Platform acting as the intelligent first point of contact for all customer support.
