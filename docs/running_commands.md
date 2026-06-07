@@ -21,7 +21,8 @@ uv run uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
 # Alternatively, if you want to manually activate the virtual environment in PowerShell:
 # .venv\Scripts\Activate.ps1
 ```
-You can view the interactive API documentation at `http://localhost:8000/docs`.
+You can view the interactive API documentation at `http://localhost:8000/api/docs`. 
+For full endpoint payloads and Postman integration instructions, please see [API Documentation](api_documentation.md).
 
 ---
 

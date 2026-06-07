@@ -72,7 +72,8 @@ uv run uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
 
 # (Optional) To manually activate in PowerShell: .venv\Scripts\Activate.ps1
 ```
-View the interactive API Swagger documentation at `http://localhost:8000/docs`.
+View the interactive API Swagger documentation at `http://localhost:8000/api/docs`.
+For detailed API request payloads and Postman setup, see [`docs/api_documentation.md`](docs/api_documentation.md).
 
 ### 2. Frontend (Next.js)
 Built with React, Next.js (App Router), TailwindCSS, ShadCN UI, Recharts, and TanStack Query.

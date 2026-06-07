@@ -3,9 +3,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 app = FastAPI(
-    title="TrNe Tech Solutions AI Service Desk API",
+    title="TrNu Tech Solutions AI Service Desk API",
     description="Enterprise AI Service Desk Platform Backend",
-    version="1.0.0"
+    version="1.0.0",
+    docs_url="/api/docs",
+    redoc_url="/api/redoc",
+    openapi_url="/api/openapi.json"
 )
 
 # Configure CORS for Next.js frontend
