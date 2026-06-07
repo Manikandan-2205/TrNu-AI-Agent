@@ -1,47 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  :root {
-    --background: 140 10% 4%; /* very dark green-slate */
-    --foreground: 140 10% 95%;
-
-    --card: 140 10% 7%;
-    --card-foreground: 140 10% 95%;
-
-    --popover: 140 10% 7%;
-    --popover-foreground: 140 10% 95%;
-
-    --primary: 152 76% 40%; /* Emerald green */
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 140 10% 15%;
-    --secondary-foreground: 140 10% 95%;
-
-    --muted: 140 10% 15%;
-    --muted-foreground: 140 10% 65%;
-
-    --accent: 140 10% 20%;
-    --accent-foreground: 140 10% 95%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 140 10% 15%;
-    --input: 140 10% 15%;
-    --ring: 152 76% 40%;
-
-    --radius: 0.5rem;
-  }
-}
+@import "tailwindcss";
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: rgba(255, 255, 255, 0.1);
   }
   body {
-    @apply bg-background text-foreground selection:bg-primary/30;
+    background-color: #050b07;
+    color: #f8fafc;
   }
 }
 
