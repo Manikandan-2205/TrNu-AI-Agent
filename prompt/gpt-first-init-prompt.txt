@@ -1,0 +1,717 @@
+# M.AI Tech Solutions AI Service Desk
+
+## Project Vision
+
+Build a production-style AI Service Desk Platform that acts as the first point of contact for customers.
+
+The system should:
+
+* Answer customer questions
+* Route requests to the correct department
+* Create tickets
+* Detect duplicate issues
+* Reduce AI costs
+* Track token usage
+* Store conversation history
+* Generate analytics
+* Support local Ollama models
+* Demonstrate LangGraph, LangChain, RAG, Memory, Context Engineering and AI Agent concepts
+
+---
+
+# Business Problem
+
+Customers contact M.AI Tech Solutions for different reasons:
+
+1. New Project Inquiry
+2. SaaS Product Questions
+3. Bug Reports
+4. Feature Requests
+5. Billing Issues
+6. Cloud Deployment Support
+7. Technical Support
+8. AMC Support
+9. Existing Project Updates
+
+Currently these requests are manually handled.
+
+The AI Agent will become the intelligent entry point.
+
+---
+
+# Main Goal
+
+When a customer sends a message:
+
+User Message
+
+↓
+
+AI Agent analyzes intent
+
+↓
+
+Classifies department
+
+↓
+
+Creates ticket
+
+↓
+
+Stores conversation
+
+↓
+
+Responds to customer
+
+↓
+
+Routes request internally
+
+---
+
+# Department Routing
+
+## Marketing Team
+
+Examples:
+
+* Tell me about your services
+* What technologies do you use?
+* I need a software project
+* Can we schedule a meeting?
+
+Route To:
+
+Marketing Department
+
+---
+
+## Sales Team
+
+Examples:
+
+* Pricing
+* Quotation request
+* Subscription plans
+* SaaS purchase
+
+Route To:
+
+Sales Department
+
+---
+
+## Technical Support Team
+
+Examples:
+
+* Application crash
+* Login issue
+* API error
+* Database issue
+
+Route To:
+
+Technical Support
+
+---
+
+## Development Team
+
+Examples:
+
+* New feature request
+* Product enhancement
+* Change request
+
+Route To:
+
+Development Team
+
+---
+
+## Cloud Team
+
+Examples:
+
+* AWS deployment issue
+* GCP issue
+* Docker issue
+* Kubernetes issue
+
+Route To:
+
+Cloud Operations
+
+---
+
+# AI Agent Workflow
+
+START
+
+↓
+
+Intent Detection Agent
+
+↓
+
+Department Router Agent
+
+↓
+
+Knowledge Base Agent
+
+↓
+
+Ticket Creation Agent
+
+↓
+
+Response Agent
+
+↓
+
+Cost Tracking Agent
+
+↓
+
+Memory Agent
+
+↓
+
+END
+
+---
+
+# LangGraph Architecture
+
+Node 1
+
+Intent Analyzer
+
+Purpose:
+
+Detect user intent
+
+Output:
+
+* Inquiry
+* Bug
+* Feature Request
+* Pricing
+* Complaint
+
+---
+
+Node 2
+
+Department Router
+
+Purpose:
+
+Select destination team
+
+Output:
+
+* Marketing
+* Sales
+* Technical
+* Development
+* Cloud
+
+---
+
+Node 3
+
+Knowledge Agent
+
+Purpose:
+
+Search company documents
+
+Sources:
+
+* FAQ
+* Product Docs
+* Service Docs
+* Pricing Docs
+
+---
+
+Node 4
+
+Duplicate Detection Agent
+
+Purpose:
+
+Check similar issues
+
+Example:
+
+User A:
+
+Login not working
+
+User B:
+
+Unable to sign in
+
+Similarity > 90%
+
+Result:
+
+Use existing solution
+
+No LLM call required
+
+---
+
+Node 5
+
+Ticket Agent
+
+Purpose:
+
+Generate ticket
+
+Example:
+
+Ticket Number:
+
+SUP-2026-0012
+
+Priority:
+
+Medium
+
+Department:
+
+Technical Support
+
+---
+
+Node 6
+
+Response Agent
+
+Purpose:
+
+Generate final response
+
+Uses:
+
+* Company knowledge
+* Conversation history
+* Ticket information
+
+---
+
+Node 7
+
+Analytics Agent
+
+Purpose:
+
+Store metrics
+
+* Tokens
+* Cost
+* Latency
+* Model
+
+---
+
+# Cost Optimization Features
+
+## Semantic Cache
+
+Store:
+
+Question Embedding
+
+Answer
+
+If similarity > 90%
+
+Return cached answer.
+
+No model call.
+
+---
+
+## Prompt Compression
+
+Store only relevant history.
+
+Avoid sending full chat history.
+
+---
+
+## Context Window Optimization
+
+Send:
+
+Last 5 messages
+
+instead of
+
+Entire conversation
+
+---
+
+## Model Selection Strategy
+
+Simple Questions
+
+Model:
+
+gemma4:e4b
+
+Complex Business Questions
+
+Model:
+
+qwen3.5:4b
+
+Code Related Questions
+
+Model:
+
+qwen2.5-coder:3b
+
+---
+
+# Knowledge Base
+
+Store:
+
+* Company Profile
+* Services
+* Pricing
+* FAQs
+* Product Documentation
+* Support Guides
+
+RAG Pipeline:
+
+Document
+
+↓
+
+Chunking
+
+↓
+
+Embedding
+
+↓
+
+MongoDB Vector Search
+
+↓
+
+Retrieval
+
+↓
+
+LLM
+
+---
+
+# Database Design
+
+MongoDB Collections
+
+users
+
+conversations
+
+messages
+
+tickets
+
+departments
+
+knowledge_base
+
+faq_cache
+
+cost_tracking
+
+analytics
+
+feedback
+
+agent_logs
+
+prompt_versions
+
+---
+
+# Analytics Dashboard
+
+Metrics
+
+## Customer Metrics
+
+* Total Customers
+* Active Customers
+* Tickets Created
+
+## AI Metrics
+
+* Total Requests
+* Cached Requests
+* Model Usage
+
+## Cost Metrics
+
+* Estimated Cost
+* Saved Cost
+* Token Usage
+
+## Support Metrics
+
+* Open Tickets
+* Closed Tickets
+* Escalations
+
+---
+
+# Recommended Technology Stack
+
+## Backend
+
+Python
+
+FastAPI
+
+LangGraph
+
+LangChain
+
+Pydantic
+
+Motor
+
+Uvicorn
+
+Ollama
+
+UV Package Manager
+
+---
+
+## Database
+
+MongoDB
+
+MongoDB Atlas (Future)
+
+---
+
+## Frontend
+
+Next.js
+
+TypeScript
+
+TailwindCSS
+
+ShadCN UI
+
+TanStack Query
+
+Recharts
+
+---
+
+## Authentication
+
+JWT
+
+Role Based Access
+
+Roles:
+
+* Admin
+* Support
+* Sales
+* Marketing
+* Customer
+
+---
+
+# Models
+
+Local Ollama
+
+Primary
+
+qwen3.5:4b
+
+Fast Responses
+
+gemma4:e4b
+
+Code Analysis
+
+qwen2.5-coder:3b
+
+---
+
+# Folder Structure
+
+backend/
+
+src/
+
+agents/
+
+graph/
+
+api/
+
+services/
+
+repositories/
+
+models/
+
+prompts/
+
+rag/
+
+analytics/
+
+cost/
+
+memory/
+
+tickets/
+
+db/
+
+frontend/
+
+app/
+
+components/
+
+features/
+
+services/
+
+hooks/
+
+types/
+
+dashboard/
+
+chat/
+
+tickets/
+
+analytics/
+
+---
+
+# Packages To Use
+
+Only Required Packages
+
+Backend
+
+fastapi
+
+uvicorn
+
+langgraph
+
+langchain
+
+langchain-ollama
+
+pydantic
+
+motor
+
+pymongo
+
+sentence-transformers
+
+numpy
+
+Frontend
+
+next
+
+react
+
+typescript
+
+tailwindcss
+
+recharts
+
+---
+
+# Packages NOT To Use
+
+Do NOT install:
+
+Redis
+
+Kafka
+
+RabbitMQ
+
+Celery
+
+Kubernetes
+
+PostgreSQL
+
+ElasticSearch
+
+Milvus
+
+Pinecone
+
+Docker Swarm
+
+Microservices
+
+These add complexity without learning value for this project.
+
+---
+
+# Resume Title
+
+Enterprise AI Service Desk Platform
+
+Multi-Agent Customer Support System using LangGraph, Ollama, RAG, Semantic Cache, Context Engineering and Cost Analytics
+
+---
+
+# Learning Outcomes
+
+After completing this project you will understand:
+
+* LangGraph
+* LangChain
+* AI Agents
+* Context Engineering
+* Token Tracking
+* Cost Management
+* Semantic Caching
+* RAG
+* Memory Systems
+* MongoDB
+* FastAPI
+* Next.js
+* Production AI Architecture
+
+This project is portfolio-grade and suitable for LinkedIn, GitHub and AI Engineer resumes.

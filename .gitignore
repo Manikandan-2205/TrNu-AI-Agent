@@ -1,0 +1,18 @@
+# General
+.DS_Store
+*.log
+node_modules/
+.next/
+dist/
+build/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+pip-log.txt
+.pytest_cache/
