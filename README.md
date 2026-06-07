@@ -67,10 +67,10 @@ Built with Python, FastAPI, and `uv` package manager.
 
 ```bash
 cd backend
-# Activate the virtual environment
-.venv\Scripts\activate
-# Start the FastAPI server on port 8000
-uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+# Run the FastAPI server natively using uv (no manual activation needed)
+uv run uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+
+# (Optional) To manually activate in PowerShell: .venv\Scripts\Activate.ps1
 ```
 View the interactive API Swagger documentation at `http://localhost:8000/docs`.
 

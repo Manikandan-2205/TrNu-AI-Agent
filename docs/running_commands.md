@@ -14,10 +14,12 @@ The backend is built with Python and the `uv` package manager. It uses FastAPI f
 ### Running the Server
 ```bash
 cd backend
-# Activate the virtual environment
-.venv\Scripts\activate
-# Start the FastAPI server on port 8000
-uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+
+# The recommended way using uv (automatically uses the virtual environment)
+uv run uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+
+# Alternatively, if you want to manually activate the virtual environment in PowerShell:
+# .venv\Scripts\Activate.ps1
 ```
 You can view the interactive API documentation at `http://localhost:8000/docs`.
 
